@@ -7,16 +7,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Modo oscuro</button>
   <header class="header">
-    <div class="container">
-      <h1 class="logo">Mi Tienda PY</h1>
-      <nav class="nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-         <a href="#contacto">Contacto</a>
-      </nav>
+  <div class="container header-content">
+    <div class="logo-area">
+      <img src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png" alt="Logo tienda" class="logo-img" />
+      <h1 class="logo-text">Mi Tienda PY</h1>
     </div>
-  </header>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
 
   <main class="container" id="inicio">
     <section id="inicio" class="inicio">
@@ -87,6 +91,11 @@
   <span id="cerrar-modal" class="cerrar-modal">&times;</span>
   <img id="imagen-ampliada" class="imagen-ampliada" src="" alt="Imagen ampliada" />
 </div>
+<button id="btn-arriba" class="btn-arriba">⬆️</button>
+
+
 
 </body>
 </html>
+
+

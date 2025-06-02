@@ -36,4 +36,3 @@ const productos = [
         imagen: "https://png.pngtree.com/png-clipart/20231116/original/pngtree-coca-cola-bottled-drink-isolated-photo-png-image_13575918.png"
     }
 ];
-

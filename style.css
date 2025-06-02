@@ -108,12 +108,16 @@ body {
 }
 
 .carrito {
-  background-color: white;
-  padding: 1rem;
-  margin-top: 3rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
 }
+
+.carrito:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
 
 .lista-carrito {
   list-style: none;
@@ -398,6 +402,220 @@ html {
 .btn-ir-productos:hover {
   background-color: #004080;
 }
+
+.header {
+  background: linear-gradient(90deg, #005baa, #0088cc);
+  padding: 1.5rem 0;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.producto-card {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.4s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .header,
+body.dark-mode .footer {
+  background-color: #111;
+  color: white;
+}
+
+body.dark-mode .producto-card {
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+}
+
+body.dark-mode .carrito,
+body.dark-mode .form-envio,
+body.dark-mode .contacto,
+body.dark-mode .inicio {
+  background-color: #2a2a2a;
+  color: #ddd;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+  background-color: #3a3a3a;
+  color: white;
+  border: 1px solid #666;
+}
+
+.dark-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1500;
+}
+
+.btn-arriba {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+
+.btn-arriba:hover {
+  background-color: #005fa3;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.toast.mostrar {
+  opacity: 1;
+}
+
+.toast.success {
+  background-color: #28a745;
+}
+
+.toast.error {
+  background-color: #dc3545;
+}
+
+.toast.warning {
+  background-color: #ffc107;
+  color: #333;
+}
+
+input:invalid,
+select:invalid {
+  border-color: red;
+  box-shadow: 0 0 5px red;
+}
+
+:root {
+  --fondo-claro: #ffffff;
+  --fondo-oscuro: #121212;
+  --texto-claro: #000000;
+  --texto-oscuro: #ffffff;
+  --borde-claro: #e0e0e0;
+  --borde-oscuro: #333333;
+  --boton-claro: #f0f0f0;
+  --boton-oscuro: #444444;
+}
+
+body {
+  background-color: var(--fondo-claro);
+  color: var(--texto-claro);
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header, .footer {
+  background-color: var(--fondo-claro);
+  border-bottom: 1px solid var(--borde-claro);
+}
+
+.btn-vaciar, .btn-finalizar {
+  background-color: var(--boton-claro);
+  color: var(--texto-claro);
+  border: 1px solid var(--borde-claro);
+}
+
+/* Otros estilos generales */
+
+body.dark-mode {
+  background-color: var(--fondo-oscuro);
+  color: var(--texto-oscuro);
+}
+
+body.dark-mode .header, body.dark-mode .footer {
+  background-color: var(--fondo-oscuro);
+  border-bottom: 1px solid var(--borde-oscuro);
+}
+
+body.dark-mode .btn-vaciar, body.dark-mode .btn-finalizar {
+  background-color: var(--boton-oscuro);
+  color: var(--texto-oscuro);
+  border: 1px solid var(--borde-oscuro);
+}
+
+/* Otros estilos específicos para el modo oscuro */
+
 
 
 
