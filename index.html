@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda Online - Paraguay</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Mi Tienda PY</h1>
+      <nav class="nav">
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="productos">
+      <h2 class="section-title">Productos en venta</h2>
+      <input type="text" id="buscador" placeholder="Buscar productos..." class="buscador" />
+
+      <div id="filtros-categorias" class="filtros">
+        <button class="btn-filtro" data-categoria="Todos">Todos</button>
+        <button class="btn-filtro" data-categoria="Bebidas">Bebidas</button>
+        <button class="btn-filtro" data-categoria="Accesorios">Accesorios</button>
+        <button class="btn-filtro" data-categoria="Lácteos">Lácteos</button>
+        <button class="btn-filtro" data-categoria="Suplementos">Suplementos</button>
+        <button class="btn-filtro" data-categoria="Alimentos">Alimentos</button>
+        <button class="btn-filtro" data-categoria="Carnes">Carnes</button>
+      </div>
+
+      <div class="grid" id="productos-container"></div>
+    </section>
+
+    <section class="carrito">
+      <h2 class="section-title">Carrito de compras</h2>
+      <ul id="lista-carrito" class="lista-carrito"></ul>
+      <p class="total">Total: <strong>₲ <span id="total">0</span></strong></p>
+      <button id="vaciar-carrito" class="btn-vaciar">Vaciar carrito</button>
+      <button id="finalizar-compra" class="btn-finalizar">Finalizar compra</button>
+
+      <div id="formulario-envio" class="form-envio" style="display: none;">
+        <h3>Datos de envío</h3>
+        <input type="text" id="nombre" placeholder="Nombre completo" required />
+        <input type="text" id="direccion" placeholder="Dirección" required />
+        <input type="text" id="ciudad" placeholder="Ciudad o barrio" required />
+
+        <h3>Forma de pago</h3>
+        <select id="forma-pago">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Tarjeta">Tarjeta de crédito/débito</option>
+          <option value="Billetera">Billetera electrónica</option>
+        </select>
+
+        <button id="confirmar-envio">Confirmar compra</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mi Tienda PY - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="productos.js"></script>
+  <script src="script.js"></script>
+  <div id="toast" class="toast"></div>
+  <div id="modal-imagen" class="modal">
+  <span id="cerrar-modal" class="cerrar-modal">&times;</span>
+  <img id="imagen-ampliada" class="imagen-ampliada" src="" alt="Imagen ampliada" />
+</div>
+
+</body>
+</html>
