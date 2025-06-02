@@ -11,15 +11,21 @@
     <div class="container">
       <h1 class="logo">Mi Tienda PY</h1>
       <nav class="nav">
-        <a href="#">Inicio</a>
-        <a href="#">Productos</a>
-        <a href="#">Contacto</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+         <a href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="productos">
+  <main class="container" id="inicio">
+    <section id="inicio" class="inicio">
+     <h2 class="section-title">Bienvenido a Mi Tienda PY</h2>
+     <p>Encontrá los mejores productos del mercado paraguayo al mejor precio.</p>
+     <a href="#productos" class="btn-ir-productos">Ver productos</a>
+    </section>
+
+    <section class="productos" id="productos">
       <h2 class="section-title">Productos en venta</h2>
       <input type="text" id="buscador" placeholder="Buscar productos..." class="buscador" />
 
@@ -36,7 +42,7 @@
       <div class="grid" id="productos-container"></div>
     </section>
 
-    <section class="carrito">
+    <section class="carrito" id="contacto">
       <h2 class="section-title">Carrito de compras</h2>
       <ul id="lista-carrito" class="lista-carrito"></ul>
       <p class="total">Total: <strong>₲ <span id="total">0</span></strong></p>
@@ -60,6 +66,13 @@
       </div>
     </section>
   </main>
+
+<section id="contacto" class="contacto">
+  <h2 class="section-title">Contacto</h2>
+  <p>Escribinos a: <strong>ventas@mitienda.com.py</strong></p>
+  <p>Teléfono: <strong>+595 971 123 456</strong></p>
+</section>
+
 
   <footer class="footer">
     <div class="container">
